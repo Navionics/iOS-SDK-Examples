@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <NSMGeoObjectResultsDelegate,CLLocationManagerDelegate>
+@interface ViewController () <NMSGeoObjectResultsDelegate,CLLocationManagerDelegate>
 {
     NSMutableArray * mCircles;
     NSMutableArray * mPolygons;
@@ -47,6 +47,7 @@
     self.polylineButton.backgroundColor = [UIColor darkGrayColor];
     self.gpsButton.backgroundColor = [UIColor darkGrayColor];
     self.downloadButton.backgroundColor = [UIColor darkGrayColor];
+    self.loginButton.backgroundColor = [UIColor darkGrayColor];
 
     
     [self.plusButton addTarget:self action:@selector(plusButtonPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -57,6 +58,8 @@
     [self.polylineButton addTarget:self action:@selector(polylineButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.gpsButton addTarget:self action:@selector(gpsButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.downloadButton addTarget:self action:@selector(downloadButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.loginButton addTarget:self action:@selector(loginButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+
 
     
     mCircles = [[NSMutableArray array] retain];
@@ -83,6 +86,7 @@
     [_polylineButton release];
     [_gpsButton release];
     [_downloadButton release];
+    [_loginButton release];
     [super dealloc];
 }
 
@@ -233,6 +237,11 @@
         [NavionicsMobileServices disableDownloadAreaSelectorAndConfirm:YES];
         self.downloadButton.backgroundColor = [UIColor darkGrayColor];
     }
+}
+
+-(void)loginButtonPressed
+{
+    [NavionicsMobileServices navionicsUser];
 }
 
 -(void)addCircle

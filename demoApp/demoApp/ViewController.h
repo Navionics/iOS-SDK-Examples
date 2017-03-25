@@ -19,5 +19,6 @@
 @property (retain, nonatomic) IBOutlet UIButton *polylineButton;
 @property (retain, nonatomic) IBOutlet UIButton *gpsButton;
 @property (retain, nonatomic) IBOutlet UIButton *downloadButton;
+@property (retain, nonatomic) IBOutlet UIButton *loginButton;
 @end
 

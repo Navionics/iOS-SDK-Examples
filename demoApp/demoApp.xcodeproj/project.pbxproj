@@ -16,6 +16,7 @@
 		0E0CE26F1E4E637400787DBA /* NavionicsMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0CE26E1E4E637400787DBA /* NavionicsMobileSDK.framework */; };
 		0E0CE2931E4E656200787DBA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0CE2921E4E656200787DBA /* libc++.tbd */; };
 		0E0CE2951E4E658700787DBA /* NavionicsMobileSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E0CE2941E4E658700787DBA /* NavionicsMobileSDK.bundle */; };
+		0E155E341E86714800942F7D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E155E331E86714800942F7D /* CoreMotion.framework */; };
 		0EDC41181E54A1E300142462 /* marker_anchor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC41171E54A1E300142462 /* marker_anchor@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		0E0CE26E1E4E637400787DBA /* NavionicsMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NavionicsMobileSDK.framework; path = ../Framework/NavionicsMobileSDK.framework; sourceTree = "<group>"; };
 		0E0CE2921E4E656200787DBA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		0E0CE2941E4E658700787DBA /* NavionicsMobileSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NavionicsMobileSDK.bundle; path = ../Framework/NavionicsMobileSDK.framework/NavionicsMobileSDK.bundle; sourceTree = "<group>"; };
+		0E155E331E86714800942F7D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		0EDC41171E54A1E300142462 /* marker_anchor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "marker_anchor@2x.png"; path = "Resources/marker_anchor@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +45,7 @@
 			files = (
 				0E0CE2931E4E656200787DBA /* libc++.tbd in Frameworks */,
 				0E0CE26F1E4E637400787DBA /* NavionicsMobileSDK.framework in Frameworks */,
+				0E155E341E86714800942F7D /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 		0E0CE2911E4E652200787DBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E155E331E86714800942F7D /* CoreMotion.framework */,
 				0E0CE2941E4E658700787DBA /* NavionicsMobileSDK.bundle */,
 				0E0CE2921E4E656200787DBA /* libc++.tbd */,
 				0E0CE26E1E4E637400787DBA /* NavionicsMobileSDK.framework */,
