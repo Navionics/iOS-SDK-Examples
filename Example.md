@@ -45,9 +45,9 @@ Add your token and your private key to your `Appdelegate` as follow:
 #import <NavionicsMobileSDK/NavionicsMobileSDK.h>
 ```
 2. Add your token and your private key to your 
-	```
+	`
 	application:didFinishLaunchingWithOptions:
-	```
+	`
 	```objective-c
 	NMSSettings* settings = [NMSSettings settings];
 	settings.projectToken = @"YOUR-PROJECT-TOKEN";
