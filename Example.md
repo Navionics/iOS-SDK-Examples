@@ -6,6 +6,7 @@ Getting Started
 ## Step 1:  Get an application Token
 
 Before you can begin working with Navionics Mobile SDK for iOS, you need to ensure that you have an application token.
+
 * Login or register a new user on the Navionics Developer Portal
 * Go to your developer console
 * Select Credentials Management
