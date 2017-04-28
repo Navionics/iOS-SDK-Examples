@@ -1,10 +1,6 @@
-Getting Started
-================
-
-
+# Getting Started
 
 ## Step 1:  Get an application Token
-
 Before you can begin working with Navionics Mobile SDK for iOS, you need to ensure that you have an application token.
 
 * Login or register a new user on the Navionics Developer Portal
@@ -14,9 +10,7 @@ Before you can begin working with Navionics Mobile SDK for iOS, you need to ensu
 * Select App Management and add the Bundle Identifier of your app
 * As soon as the token request will be processed, you will receive a notification by mail.
 
-
 ## Step 2:  Get the latest version of Xcode
-
 To build a project using the Google Maps SDK for iOS, you need version 8.0 or later of Xcode.
 
 
