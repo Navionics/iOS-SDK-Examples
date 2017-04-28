@@ -39,24 +39,21 @@ Add your token and your private key to your `Appdelegate` as follow:
 ```objective-c 
 #import <NavionicsMobileSDK/NavionicsMobileSDK.h>
 ```
-2. Add your token and your private key to your 
-	`
-	application:didFinishLaunchingWithOptions:
-	`
-	```objective-c
-	NMSSettings* settings = [NMSSettings settings];
-	settings.projectToken = @"YOUR-PROJECT-TOKEN";
-	settings.privateKey = @"-----BEGIN RSA PRIVATE KEY-----\nYOUR\nPRIVATE\nKEY\n-----END RSA PRIVATE KEY-----\n";
-	[NavionicsMobileServices initializeWithSettings:settings];
-	```
+2. Add your token and your private key to your `application:didFinishLaunchingWithOptions:`
+```objective-c
+NMSSettings* settings = [NMSSettings settings];
+settings.projectToken = @"YOUR-PROJECT-TOKEN";
+settings.privateKey = @"-----BEGIN RSA PRIVATE KEY-----\nYOUR\nPRIVATE\nKEY\n-----END RSA PRIVATE KEY-----\n";
+[NavionicsMobileServices initializeWithSettings:settings];
+```
 Note that your private key will have the following format:
-	```objective-c
-	-----BEGIN RSA PRIVATE KEY-----
-	YOUR
-	PRIVATE
-	KEY
-	-----END RSA PRIVATE KEY-----
-	```
+```
+-----BEGIN RSA PRIVATE KEY-----
+YOUR
+PRIVATE
+KEY
+-----END RSA PRIVATE KEY-----
+```
 
 Do not forget to add the new line character `\n`
 
