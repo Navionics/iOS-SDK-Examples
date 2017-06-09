@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <NMSGeoObjectResultsDelegate,CLLocationManagerDelegate>
+@interface ViewController () <NMSGeoObjectResultsDelegate,CLLocationManagerDelegate,UIGestureRecognizerDelegate>
 {
     NSMutableArray * mCircles;
     NSMutableArray * mPolygons;
@@ -60,12 +60,21 @@
     [self.downloadButton addTarget:self action:@selector(downloadButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.loginButton addTarget:self action:@selector(loginButtonPressed) forControlEvents:UIControlEventTouchUpInside];
 
-
     
     mCircles = [[NSMutableArray array] retain];
     mPolygons = [[NSMutableArray array] retain];
     mMarkers = [[NSMutableArray array] retain];
     mPolylines = [[NSMutableArray array] retain];
+    
+    UILongPressGestureRecognizer * longPressRecognizer = [[UILongPressGestureRecognizer alloc]
+                                                          initWithTarget:self
+                                                          action:@selector(handleLongPressGestures:)];
+    longPressRecognizer.delegate = self;
+    longPressRecognizer.minimumPressDuration = 1.0f;
+    
+    [self.view addGestureRecognizer:longPressRecognizer];
+    [longPressRecognizer release];
+    
 }
 
 - (void)dealloc
@@ -98,14 +107,39 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [NavionicsMobileServices setGeoObjectsResultsDelegate:self];
-    [self.mapView moveToLocation:CLLocationCoordinate2DMake(41.6229011,-70.285697) andZoom:4 animated:NO];
+    [self.mapView moveToLocation:CLLocationCoordinate2DMake(41.6229011,-70.285697) andZoom:16 animated:NO];
 
     
     NMSMapSettingsEdit* settings = [NMSMapSettingsEdit mapSettings];
     settings.mapMode = NMSMapModeSonarCharts;
     settings.depthContoursDensity = NMSDepthContoursDensityVeryHigh;
-    settings.depthUnit = NMSDepthUnitFeet;
+    settings.depthUnit = NMSDepthUnitMeters;
+    settings.speedUnit = NMSSpeedUnitKPH;
     self.mapView.settings = settings;
+}
+
+- (void)handleLongPressGestures:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded && gestureRecognizer.view == self.view)
+    {
+        const CGPoint pos = [gestureRecognizer locationInView:self.mapView];
+        [NavionicsMobileServices geoObjectsAtPoint:pos];
+    }
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if(gestureRecognizer.view == self.view)
+        return YES;
+    return NO;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    if(gestureRecognizer.view == self.view || otherGestureRecognizer.view == self.view)
+        return YES;
+    return NO;
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
@@ -251,10 +285,12 @@
         NMSCircle* circle = [NMSCircle circleWithPosition:circleLocation radius:250];
         circle.fillColor = [UIColor redColor];
         circle.zIndex = 1;
+        circle.strokeWidth = 2;
+        circle.strokeColor = [UIColor colorWithRed:0.5 green:0.2 blue:0.8 alpha:0.5];
         circle.map = self.mapView;
         [mCircles addObject:circle];
 
-        [self.mapView moveToLocation:circleLocation andZoom:7.0 animated:YES];
+        [self.mapView moveToLocation:circleLocation andZoom:16.0 animated:YES];
     }
 }
 
@@ -283,10 +319,12 @@
         
         NMSPolygon* polygon = [NMSPolygon polygonWithPath:path];
         polygon.fillColor = [UIColor colorWithRed:75.0f/255.0f green:159.0f/255.0f blue:101.0f/255.0f alpha:0.7f];
+        polygon.strokeWidth = 5.0f;
+        polygon.strokeColor = [UIColor darkGrayColor];
         polygon.map = self.mapView;
         [mPolygons addObject:polygon];
         
-        [self.mapView moveToLocation:CLLocationCoordinate2DMake(41.5943782,-70.3538668) andZoom:7.0 animated:YES];
+        [self.mapView moveToLocation:CLLocationCoordinate2DMake(41.5943782,-70.3538668) andZoom:12.0 animated:YES];
 
     }
 }
@@ -315,7 +353,7 @@
         marker.anchor = CGPointMake(0.5, 0.5);
         [mMarkers addObject:marker];
         
-        [self.mapView moveToLocation:markerLocation andZoom:7.0 animated:YES];
+        [self.mapView moveToLocation:markerLocation andZoom:13.0 animated:YES];
     }
 }
 
@@ -348,7 +386,9 @@
         polyline.map = self.mapView;
         [mPolylines addObject:polyline];
         
-        [self.mapView moveToLocation:CLLocationCoordinate2DMake(41.5698391,-70.0216346) andZoom:7.0 animated:YES];
+        NMSCameraPosition* position = [NMSCameraPosition cameraWithTarget:CLLocationCoordinate2DMake(41.5698391,-70.0216346) zoom:11.0];
+        
+        [self.mapView moveToCameraPosition:position animated:YES];
     }
 }
 
