@@ -28,7 +28,7 @@ To build a project using the Google Maps SDK for iOS, you need version 8.0 or la
 	* `CoreMotion.framework`
 	* `libc++.tbd`
 7. Open the `Build Settings` tab and set the `Enable Bitcode` option to `NO`
-8. Open the `Capabilities` tab, switch on `Background Modes` and select `Location updates`
+
 
 
 ## Step 4:  Use your Token in your application
