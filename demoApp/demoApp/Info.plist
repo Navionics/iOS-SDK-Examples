@@ -22,7 +22,9 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationAlwaysUsageDescription</key>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Let me use your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Let me use your location</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
