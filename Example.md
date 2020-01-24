@@ -25,6 +25,7 @@ To build a project using the Google Maps SDK for iOS, you need version 8.0 or la
 6. Open the `Build Phases` tab, and within Link Binary with Libraries, add the following frameworks:
 	* `NavionicsMobileSDK.framework`
 	* `CoreLocation.framework`
+	* `WebKit.framework`
 	* `CoreMotion.framework`
 	* `libc++.tbd`
 7. Open the `Build Settings` tab and set the `Enable Bitcode` option to `NO`

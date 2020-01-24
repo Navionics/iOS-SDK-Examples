@@ -17,6 +17,7 @@
 		0E0CE2671E4E633700787DBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0CE2651E4E633700787DBA /* LaunchScreen.storyboard */; };
 		0E0CE26F1E4E637400787DBA /* NavionicsMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0CE26E1E4E637400787DBA /* NavionicsMobileSDK.framework */; };
 		0E155E341E86714800942F7D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E155E331E86714800942F7D /* CoreMotion.framework */; };
+		0E2DD76C23D9DE3E000372A9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2DD76B23D9DE3D000372A9 /* WebKit.framework */; };
 		0EDC41181E54A1E300142462 /* marker_anchor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC41171E54A1E300142462 /* marker_anchor@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		0E0CE2921E4E656200787DBA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		0E0CE2941E4E658700787DBA /* NavionicsMobileSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NavionicsMobileSDK.bundle; path = ../Framework/NavionicsMobileSDK.framework/NavionicsMobileSDK.bundle; sourceTree = "<group>"; };
 		0E155E331E86714800942F7D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		0E2DD76B23D9DE3D000372A9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0EDC41171E54A1E300142462 /* marker_anchor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "marker_anchor@2x.png"; path = "Resources/marker_anchor@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,6 +48,7 @@
 				0E0127211EB8CC47004DE0CE /* libc++.tbd in Frameworks */,
 				0E0CE26F1E4E637400787DBA /* NavionicsMobileSDK.framework in Frameworks */,
 				0E155E341E86714800942F7D /* CoreMotion.framework in Frameworks */,
+				0E2DD76C23D9DE3E000372A9 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +102,9 @@
 			children = (
 				0E0CE26E1E4E637400787DBA /* NavionicsMobileSDK.framework */,
 				0E0CE2941E4E658700787DBA /* NavionicsMobileSDK.bundle */,
-				0E0CE2921E4E656200787DBA /* libc++.tbd */,
+				0E2DD76B23D9DE3D000372A9 /* WebKit.framework */,
 				0E155E331E86714800942F7D /* CoreMotion.framework */,
+				0E0CE2921E4E656200787DBA /* libc++.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +163,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
