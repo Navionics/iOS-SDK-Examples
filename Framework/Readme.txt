@@ -1,1 +1,1 @@
-Copy in this folder the NavionicsMobileSDK.framework
+Copy in this folder the NavionicsMobileSDK.xcframework

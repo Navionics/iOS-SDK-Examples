@@ -19,11 +19,11 @@ To build a project using the Navionics Mobile SDK for iOS, you need version 8.0 
 1. Download the SDK source files.
 2. Unpack the source files.
 3. Open your project, or create a new project. Drag the framework into your project.
-	* `NavionicsMobileSDK.framework`
-4. Right-click `NavionicsMobileSDK.framework` in your project, and select Show In Finder.
-5. Drag the `NavionicsMobileSDK.bundle` from the Resources folder into your project.
+	* `NavionicsMobileSDK.xcframework`
+4. Right-click `NavionicsMobileSDK.xcframework` in your project, and select Show In Finder.
+5. Drag the `NavionicsMobileSDK.bundle` from the `NavionicsMobileSDK.xcframework` folder into your project.
 6. Open the `Build Phases` tab, and within Link Binary with Libraries, add the following frameworks:
-	* `NavionicsMobileSDK.framework`
+	* `NavionicsMobileSDK.xcframework`
 	* `CoreLocation.framework`
 	* `WebKit.framework`
 	* `CoreMotion.framework`

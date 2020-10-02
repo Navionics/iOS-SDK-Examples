@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E0126FA1EB89D13004DE0CE /* NavionicsMobileSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E0CE2941E4E658700787DBA /* NavionicsMobileSDK.bundle */; };
 		0E0127211EB8CC47004DE0CE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0CE2921E4E656200787DBA /* libc++.tbd */; };
 		0E0CE2591E4E633700787DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0CE2581E4E633700787DBA /* main.m */; };
 		0E0CE25C1E4E633700787DBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0CE25B1E4E633700787DBA /* AppDelegate.m */; };
@@ -15,9 +14,10 @@
 		0E0CE2621E4E633700787DBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0CE2601E4E633700787DBA /* Main.storyboard */; };
 		0E0CE2641E4E633700787DBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0CE2631E4E633700787DBA /* Assets.xcassets */; };
 		0E0CE2671E4E633700787DBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0CE2651E4E633700787DBA /* LaunchScreen.storyboard */; };
-		0E0CE26F1E4E637400787DBA /* NavionicsMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0CE26E1E4E637400787DBA /* NavionicsMobileSDK.framework */; };
 		0E155E341E86714800942F7D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E155E331E86714800942F7D /* CoreMotion.framework */; };
 		0E2DD76C23D9DE3E000372A9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2DD76B23D9DE3D000372A9 /* WebKit.framework */; };
+		0E42D9A1251B74B200772B1D /* NavionicsMobileSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E42D9A0251B74B200772B1D /* NavionicsMobileSDK.xcframework */; };
+		0E42DA9E251CDD2600772B1D /* NavionicsMobileSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E42DA9D251CDD2600772B1D /* NavionicsMobileSDK.bundle */; };
 		0EDC41181E54A1E300142462 /* marker_anchor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC41171E54A1E300142462 /* marker_anchor@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -32,11 +32,11 @@
 		0E0CE2631E4E633700787DBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E0CE2661E4E633700787DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E0CE2681E4E633700787DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E0CE26E1E4E637400787DBA /* NavionicsMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NavionicsMobileSDK.framework; path = ../Framework/NavionicsMobileSDK.framework; sourceTree = "<group>"; };
 		0E0CE2921E4E656200787DBA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		0E0CE2941E4E658700787DBA /* NavionicsMobileSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NavionicsMobileSDK.bundle; path = ../Framework/NavionicsMobileSDK.framework/NavionicsMobileSDK.bundle; sourceTree = "<group>"; };
 		0E155E331E86714800942F7D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		0E2DD76B23D9DE3D000372A9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		0E42D9A0251B74B200772B1D /* NavionicsMobileSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NavionicsMobileSDK.xcframework; path = ../Framework/NavionicsMobileSDK.xcframework; sourceTree = "<group>"; };
+		0E42DA9D251CDD2600772B1D /* NavionicsMobileSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NavionicsMobileSDK.bundle; path = ../Framework/NavionicsMobileSDK.xcframework/NavionicsMobileSDK.bundle; sourceTree = "<group>"; };
 		0EDC41171E54A1E300142462 /* marker_anchor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "marker_anchor@2x.png"; path = "Resources/marker_anchor@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,8 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E42D9A1251B74B200772B1D /* NavionicsMobileSDK.xcframework in Frameworks */,
 				0E0127211EB8CC47004DE0CE /* libc++.tbd in Frameworks */,
-				0E0CE26F1E4E637400787DBA /* NavionicsMobileSDK.framework in Frameworks */,
 				0E155E341E86714800942F7D /* CoreMotion.framework in Frameworks */,
 				0E2DD76C23D9DE3E000372A9 /* WebKit.framework in Frameworks */,
 			);
@@ -100,8 +100,8 @@
 		0E0CE2911E4E652200787DBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0E0CE26E1E4E637400787DBA /* NavionicsMobileSDK.framework */,
-				0E0CE2941E4E658700787DBA /* NavionicsMobileSDK.bundle */,
+				0E42DA9D251CDD2600772B1D /* NavionicsMobileSDK.bundle */,
+				0E42D9A0251B74B200772B1D /* NavionicsMobileSDK.xcframework */,
 				0E2DD76B23D9DE3D000372A9 /* WebKit.framework */,
 				0E155E331E86714800942F7D /* CoreMotion.framework */,
 				0E0CE2921E4E656200787DBA /* libc++.tbd */,
@@ -182,7 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E0126FA1EB89D13004DE0CE /* NavionicsMobileSDK.bundle in Resources */,
+				0E42DA9E251CDD2600772B1D /* NavionicsMobileSDK.bundle in Resources */,
 				0E0CE2671E4E633700787DBA /* LaunchScreen.storyboard in Resources */,
 				0E0CE2641E4E633700787DBA /* Assets.xcassets in Resources */,
 				0E0CE2621E4E633700787DBA /* Main.storyboard in Resources */,
@@ -324,7 +324,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Framework";
 				INFOPLIST_FILE = demoApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.navionics.demoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -339,7 +342,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Framework";
 				INFOPLIST_FILE = demoApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.navionics.demoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
