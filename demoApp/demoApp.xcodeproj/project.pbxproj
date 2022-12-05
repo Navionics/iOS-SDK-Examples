@@ -16,10 +16,25 @@
 		0E0CE2671E4E633700787DBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0CE2651E4E633700787DBA /* LaunchScreen.storyboard */; };
 		0E155E341E86714800942F7D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E155E331E86714800942F7D /* CoreMotion.framework */; };
 		0E2DD76C23D9DE3E000372A9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2DD76B23D9DE3D000372A9 /* WebKit.framework */; };
-		0E42D9A1251B74B200772B1D /* NavionicsMobileSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E42D9A0251B74B200772B1D /* NavionicsMobileSDK.xcframework */; };
 		0E42DA9E251CDD2600772B1D /* NavionicsMobileSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E42DA9D251CDD2600772B1D /* NavionicsMobileSDK.bundle */; };
+		0E69700B29376ECA0092D8A5 /* NavionicsMobileSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E42D9A0251B74B200772B1D /* NavionicsMobileSDK.xcframework */; };
+		0E69700C29376ECA0092D8A5 /* NavionicsMobileSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E42D9A0251B74B200772B1D /* NavionicsMobileSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0EDC41181E54A1E300142462 /* marker_anchor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC41171E54A1E300142462 /* marker_anchor@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E69700D29376ECA0092D8A5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E69700C29376ECA0092D8A5 /* NavionicsMobileSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E0CE2541E4E633700787DBA /* demoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,8 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E42D9A1251B74B200772B1D /* NavionicsMobileSDK.xcframework in Frameworks */,
 				0E0127211EB8CC47004DE0CE /* libc++.tbd in Frameworks */,
+				0E69700B29376ECA0092D8A5 /* NavionicsMobileSDK.xcframework in Frameworks */,
 				0E155E341E86714800942F7D /* CoreMotion.framework in Frameworks */,
 				0E2DD76C23D9DE3E000372A9 /* WebKit.framework in Frameworks */,
 			);
@@ -127,6 +142,7 @@
 				0E0CE2501E4E633700787DBA /* Sources */,
 				0E0CE2511E4E633700787DBA /* Frameworks */,
 				0E0CE2521E4E633700787DBA /* Resources */,
+				0E69700D29376ECA0092D8A5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
