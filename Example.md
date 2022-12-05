@@ -45,6 +45,7 @@ Add your token and your private key to your `Appdelegate` as follow:
 NMSSettings* settings = [NMSSettings settings];
 settings.mode = NMSFrameworkModeSandbox;
 settings.projectToken = @"YOUR-PROJECT-TOKEN";
+settings.configurationToken = @"YOUR-CONFIGURATION-TOKEN";
 settings.privateKey = @"-----BEGIN RSA PRIVATE KEY-----\nYOUR\nPRIVATE\nKEY\n-----END RSA PRIVATE KEY-----\n";
 NSError* error = nil;
 [NavionicsMobileServices initializeWithSettings:settings error:&error];

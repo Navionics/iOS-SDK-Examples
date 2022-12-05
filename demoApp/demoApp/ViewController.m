@@ -110,7 +110,7 @@
     [self.mapView moveToLocation:CLLocationCoordinate2DMake(41.6229011,-70.285697) andZoom:16 animated:NO];
 
     
-    NMSMapSettingsEdit* settings = [NMSMapSettingsEdit mapSettings];
+    NMSMapSettingsEdit* settings = [NMSMapSettingsEdit initMapSettings];
     settings.mapMode = NMSMapModeSonarCharts;
     settings.depthContoursDensity = NMSDepthContoursDensityVeryHigh;
     settings.depthUnit = NMSDepthUnitMeters;
